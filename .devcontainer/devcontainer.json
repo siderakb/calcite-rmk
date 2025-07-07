@@ -1,0 +1,24 @@
+{
+  "name": "RMK Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.eol": "\n",
+        "editor.detectIndentation": false,
+        "editor.comments.insertSpace": true,
+        "rust-analyzer.cargo.target": "thumbv7em-none-eabihf"
+      },
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  }
+}
